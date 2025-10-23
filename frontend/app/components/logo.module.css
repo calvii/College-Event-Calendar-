@@ -1,0 +1,41 @@
+/* style logo to resemble the white oval badge from the reference */
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  color: var(--color-foreground);
+  text-wrap: balance;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.35rem, 1vw, 0.5rem);
+  padding: 0.55rem clamp(1.2rem, 3vw, 1.85rem);
+  border-radius: 999px / 70%;
+  background-color: var(--color-foreground);
+  color: var(--color-secondary);
+  border: 2px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+  box-shadow: 0 0.5rem 0 color-mix(in srgb, var(--color-secondary) 35%, transparent);
+}
+
+.badgeLetters {
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.badgeDivider {
+  display: block;
+  width: 2px;
+  height: clamp(1.6rem, 3vw, 2rem);
+  background-color: color-mix(in srgb, var(--color-secondary) 65%, transparent);
+}
+
+.wordmark {
+  font-size: clamp(0.68rem, 1.6vw, 0.9rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}

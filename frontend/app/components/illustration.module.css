@@ -1,0 +1,16 @@
+/* replace geometric placeholder shapes with supplied artwork */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 2.75rem;
+  overflow: hidden;
+  border: 3px solid color-mix(in srgb, var(--color-foreground) 45%, transparent);
+  background-color: color-mix(in srgb, var(--color-secondary) 18%, transparent);
+  box-shadow: 0 1.75rem 3rem -1.5rem color-mix(in srgb, var(--color-foreground) 65%, transparent);
+}
+
+.image {
+  display: block;
+  width: 100%;
+}

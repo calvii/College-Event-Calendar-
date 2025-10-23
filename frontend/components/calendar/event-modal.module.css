@@ -1,0 +1,188 @@
+/* Modal styling using calendar tokens */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in oklab, black 60%, transparent);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+.modal {
+  width: 100%;
+  max-width: 760px;
+  background: var(--color-calendar-card);
+  color: var(--color-calendar-card-foreground);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 12px 30px rgba(0, 0, 0, 0.18);
+  padding: 1rem;
+  max-height: 85dvh;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-bottom: .5rem;
+}
+.heading {
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+.closeBtn {
+  border: 0;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-calendar-card-foreground);
+  opacity: 0.7;
+}
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.eventsList {
+}
+.list {
+  display: grid;
+  gap: .5rem;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  border: 1px solid var(--color-calendar-border);
+  border-radius: var(--radius-md);
+  padding: .5rem .625rem;
+  background: var(--color-calendar-cell);
+}
+.itemMain {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.badge {
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+}
+.badgeAcademic {
+  background: var(--color-calendar-dot-academic);
+}
+.badgeSports {
+  background: var(--color-calendar-dot-sports);
+}
+.badgeClub {
+  background: var(--color-calendar-dot-club);
+}
+
+.itemTitle {
+  font-weight: 700;
+}
+.itemMeta {
+  font-size: .85rem;
+  color: var(--color-calendar-muted-foreground);
+}
+.itemActions {
+  display: flex;
+  gap: .375rem;
+}
+
+.form {
+  border: 1px solid var(--color-calendar-border);
+  border-radius: var(--radius-md);
+  padding: .75rem;
+  background: var(--color-calendar-cell);
+}
+.formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+.formTitle {
+  font-weight: 800;
+}
+.label {
+  display: grid;
+  gap: .25rem;
+  margin-bottom: .5rem;
+}
+.input,
+.select,
+.textarea {
+  border: 1px solid var(--color-calendar-border);
+  border-radius: var(--radius-md);
+  background: var(--color-calendar-card);
+  color: var(--color-calendar-card-foreground);
+  padding: .5rem .6rem;
+}
+
+.formActions {
+  display: flex;
+  gap: .5rem;
+  justify-content: flex-end;
+}
+
+.primaryBtn {
+  background: var(--color-calendar-accent);
+  color: var(--color-calendar-on-accent);
+  border: 1px solid var(--color-calendar-accent);
+  border-radius: var(--radius-md);
+  padding: .5rem .75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.primaryBtn:hover {
+  filter: brightness(0.95);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--color-calendar-accent);
+  border: 1px solid var(--color-calendar-accent);
+  border-radius: var(--radius-md);
+  padding: .5rem .75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.secondaryBtn:hover {
+  background: color-mix(in oklab, var(--color-calendar-accent) 8%, transparent);
+}
+
+.dangerBtn {
+  background: transparent;
+  color: var(--color-calendar-danger);
+  border: 1px solid var(--color-calendar-danger);
+  border-radius: var(--radius-md);
+  padding: .4rem .65rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dangerBtn:hover {
+  background: color-mix(in oklab, var(--color-calendar-danger) 8%, transparent);
+}
+
+.info {
+  font-size: .9rem;
+  color: var(--color-calendar-muted-foreground);
+}
+.error {
+  color: var(--color-calendar-danger);
+  font-weight: 700;
+}
